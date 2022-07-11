@@ -79,25 +79,21 @@
   <div class="row">
     <form class="col-md-8 form">
       <div class="form-group mt-4">
-        <label for="formGroupExampleInput">Add Task</label>
-        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
+        <label for="formGroupExampleInput">Add Task Name</label>
+        <input type="text" class="form-control" id="taskName" placeholder="Example input">
       </div>
+     
       <div class="form-group">
-        <label for="formGroupExampleInput2">Name</label>
-        <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
-      </div>
-      
-      <div class="form-group">
-        <label for="exampleFormControlSelect1">Status</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <label >Status</label>
+        <select class="form-control" id="taskStatus">
           <option>In progress</option>
           <option>Pending</option>
           <option>Complete</option>
         </select>
       </div>
       <div class="form-group">
-        <label for="exampleFormControlSelect1">Assign to</label>
-        <select class="form-control" id="exampleFormControlSelect1">
+        <label for="">Assign to</label>
+        <select class="form-control" id="taskAssign">
           <option>Select Developer</option>
           <option>Martin</option>
           <option>Christian</option>
@@ -111,11 +107,11 @@
       </div>
       <div class="form-group">
         <label for="dateDue">Date Due: </label>
-        <input type="date" class="form-control" id="dueDate" placeholder="" value="Name">
+        <input type="date" class="form-control" id="taskDueDate" placeholder="" value="Name">
       </div>
       <div class="form-group mb-5">
-        <label for="exampleFormControlTextarea1">Description</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <label for="">Description</label>
+        <textarea class="form-control" id="taskDescription" rows="3"></textarea>
       </div>
       <button id="addNewTask" class="btn btn-primary btn-lg btn-block mb-5">Add Task</button>
       
@@ -201,5 +197,10 @@
 
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+   <!--Below added links of Js files-->
+   <script src="js/taskManager.js"></script>
+   <script src="js/index.js"></script>
+   
+
   </body>
 </html>
