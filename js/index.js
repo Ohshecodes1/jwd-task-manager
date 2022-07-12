@@ -23,6 +23,7 @@ window.addEventListener("load", () => {
     // append
     form.appenchild("enteredName");
     */
+
     if (taskName == null || taskName == null || taskStatus == null || taskAssign == null || taskDueDate == null || taskDescription == null) {
       alert("Please fill out all required fields")
     } else {
