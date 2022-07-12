@@ -1,206 +1,210 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">  
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
 </head>
-  <body>
-    <nav class="navbar navbar-expand-lg  text-secondary rounded   mt-0">
-        <div class="container-fluid ">
-          <a class="navbar-brand text-white" href="#">Task Manager</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse nav-btn navbar-collapse d-flex flex-row-reverse " id="navbarNav">
-            <ul class="navbar-nav ">
-              <li class="nav-item">
-                <a class="nav-link active text-white " aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white " href="#">About us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-white " href="#">Github</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <style>
-    
-        .navbar{
-            background-color: #2D4B5A;
-        }
-        .jumbotron{
-            background-color: #006e8c;
-            height:100vh;
-        }
-        .bi{
-            color:orange;
-            font-size:25px;
-        }
-        .card{
-            background:#46B8DA;
-            height:40%;
-            margin-left:20px;
-            margin-top:50px;
-        }
-        .form{
-          background:#46B8DA;
-          margin-left:25px;
-          margin-top:50px;
-          border-radius:10px;
-          margin:auto;
-          margin-top:20px;
-          margin-bottom:20px;
-        }
 
-      </style>
-
-<div class="container-fluid">
-    <div class="row jumbotron smaller-card">
-        <div class="card col-4" style="width: 18rem;">
-             
-             <div class="card-body">
-               <h5 class="card-title">New Task</h5>
-               <button type="button" class="btn btn-link bg-light"><span class="bi bi-plus  "></span></button>
-               <a href="#" class="btn btn-primary">View task history</a>
-             </div>
-        </div>
-       
+<body>
+  <nav class="navbar navbar-expand-lg  text-secondary rounded   mt-0">
+    <div class="container-fluid ">
+      <a class="navbar-brand text-white" href="#">Task Manager</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse nav-btn navbar-collapse d-flex flex-row-reverse " id="navbarNav">
+        <ul class="navbar-nav ">
+          <li class="nav-item">
+            <a class="nav-link active text-white " aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white " href="#">Github</a>
+          </li>
+        </ul>
+      </div>
     </div>
-</div>
+  </nav>
+  <style>
+    .navbar {
+      background-color: #2D4B5A;
+    }
 
-<div class="container-fluid">
-  <div class="row">
-    <form class="col-md-8 form">
-      <div class="form-group mt-4">
-        <label for="formGroupExampleInput">Add Task Name</label>
-        <input type="text" class="form-control" id="taskName" placeholder="Example input">
+    .jumbotron {
+      background-color: #006e8c;
+      height: 100vh;
+    }
+
+    .bi {
+      color: orange;
+      font-size: 25px;
+    }
+
+    .card {
+      background: #46B8DA;
+      height: 40%;
+      margin-left: 20px;
+      margin-top: 50px;
+    }
+
+    .form {
+      background: #46B8DA;
+      margin-left: 25px;
+      margin-top: 50px;
+      border-radius: 10px;
+      margin: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+  </style>
+
+  <div class="container-fluid">
+    <div class="row jumbotron smaller-card">
+      <div class="card col-4" style="width: 18rem;">
+
+        <div class="card-body">
+          <h5 class="card-title">New Task</h5>
+          <button type="button" class="btn btn-link bg-light"><span class="bi bi-plus  "></span></button>
+          <a href="#" class="btn btn-primary">View task history</a>
+        </div>
       </div>
-     
-      <div class="form-group">
-        <label >Status</label>
-        <select class="form-control" id="taskStatus">
-          <option>In progress</option>
-          <option>Pending</option>
-          <option>Complete</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="">Assign to</label>
-        <select class="form-control" id="taskAssign">
-          <option>Select Developer</option>
-          <option>Martin</option>
-          <option>Christian</option>
-          <option>Asia</option>
-          <option>Maxine</option>
-          <option>Sheila</option>
-          <option>Hamza</option>
-          <option>Getahun</option>
-          <option>Elena</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="dateDue">Date Due: </label>
-        <input type="date" class="form-control" id="taskDueDate" placeholder="" value="Name">
-      </div>
-      <div class="form-group mb-5">
-        <label for="">Description</label>
-        <textarea class="form-control" id="taskDescription" rows="3"></textarea>
-      </div>
-      <button id="addNewTask" class="btn btn-primary btn-lg btn-block mb-5">Add Task</button>
-      
-    </form>
-    
+
+    </div>
   </div>
-  
-</div>
+
+  <div class="container-fluid">
+    <div class="row">
+      <form class="col-md-8 form">
+        <div class="form-group mt-4">
+          <label for="formGroupExampleInput">Add Task Name</label>
+          <input type="text" class="form-control" id="taskName" placeholder="Example input">
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <select class="form-control" id="taskStatus">
+            <option>In progress</option>
+            <option>Pending</option>
+            <option>Complete</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="">Assign to</label>
+          <select class="form-control" id="taskAssign">
+            <option>Select Developer</option>
+            <option>Martin</option>
+            <option>Christian</option>
+            <option>Asia</option>
+            <option>Maxine</option>
+            <option>Sheila</option>
+            <option>Hamza</option>
+            <option>Getahun</option>
+            <option>Elena</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="dateDue">Date Due: </label>
+          <input type="date" class="form-control" id="taskDueDate" placeholder="" value="Name">
+        </div>
+        <div class="form-group mb-5">
+          <label for="">Description</label>
+          <textarea class="form-control" id="taskDescription" rows="3"></textarea>
+        </div>
+        <button id="addNewTask" class="btn btn-primary btn-lg btn-block mb-5">Add Task</button>
+
+      </form>
+
+    </div>
+
+  </div>
 
 
 
 
-<div class="container-fluid section-3 ">
-  <div class="row jumbotron smaller-card " style="height:100%;">
-      <div class="card" style="width: 18rem;">
-           
-           <div class="card-body">
-            <h5 class="card-title">Task X</h5>
-            <p class="card-text">Task X description</p>
-            <span class="badge badge-warning">PENDING</span>
-            <p class="card-text">Person 1</p>
-            <p class="card-text">Due Date: 2/20/2022</p>
-            
-            <a href="#" class="btn btn-primary">Delete Task</a>
-             </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-           
+  <div class="container-fluid section-3 ">
+    <div class="row jumbotron smaller-card " style="height:100%;">
+
+      <div class="card" id="tasksList" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">Task X</h5>
-            <p class="card-text">Task X description</p>
-            <span class="badge badge-warning">PENDING</span>
-            <p class="card-text">Person 1</p>
-            <p class="card-text">Due Date: 2/20/2022</p>
-            
-            <a href="#" class="btn btn-primary">Delete Task</a>
-            </div>
-   </div>
-   <div class="card" style="width: 18rem;">
-           
-    <div class="card-body">
-      <h5 class="card-title">Task X</h5>
-            <p class="card-text">Task X description</p>
-            <span class="badge badge-warning">PENDING</span>
-            <p class="card-text">Person 1</p>
-            <p class="card-text">Due Date: 2/20/2022</p>
-            
-            <a href="#" class="btn btn-primary">Delete Task</a>
-            </div>
-</div>
-<div class="card" style="width: 18rem;">
-           
-  <div class="card-body">
-    <h5 class="card-title">Task X</h5>
-            <p class="card-text">Task X description</p>
-            <span class="badge badge-warning">PENDING</span>
-            <p class="card-text">Person 1</p>
-            <p class="card-text">Due Date: 2/20/2022</p>
-            
-            <a href="#" class="btn btn-primary">Delete Task</a>
-            </div>
-</div>
-<div class="card" style="width: 18rem;">
-           
-  <div class="card-body">
-    <h5 class="card-title">Task X</h5>
-            <p class="card-text">Task X description</p>
-            <span class="badge badge-warning">PENDING</span>
-            <p class="card-text">Person 1</p>
-            <p class="card-text">Due Date: 2/20/2022</p>
-            
-            <a href="#" class="btn btn-primary">Delete Task</a>
-            </div>
-</div>
-     
-       
-     </div>
- </div>
- 
-           
-  
+          <p class="card-text">Task X description</p>
+          <span class="badge badge-warning">PENDING</span>
+          <p class="card-text">Person 1</p>
+          <p class="card-text">Due Date: 2/20/2022</p>
+          <a href="#" class="btn btn-primary">Delete Task</a>
+        </div>
+      </div>
+
+      <div class="card" id="tasksList" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Task X</h5>
+          <p class="card-text">Task X description</p>
+          <span class="badge badge-warning">PENDING</span>
+          <p class="card-text">Person 1</p>
+          <p class="card-text">Due Date: 2/20/2022</p>
+          <a href="#" class="btn btn-primary">Delete Task</a>
+        </div>
+      </div>
+
+      <div class="card" id="tasksList" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Task X</h5>
+          <p class="card-text">Task X description</p>
+          <span class="badge badge-warning">PENDING</span>
+          <p class="card-text">Person 1</p>
+          <p class="card-text">Due Date: 2/20/2022</p>
+          <a href="#" class="btn btn-primary">Delete Task</a>
+        </div>
+      </div>
+
+      <div class="card" id="tasksList" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Task X</h5>
+          <p class="card-text">Task X description</p>
+          <span class="badge badge-warning">PENDING</span>
+          <p class="card-text">Person 1</p>
+          <p class="card-text">Due Date: 2/20/2022</p>
+          <a href="#" class="btn btn-primary">Delete Task</a>
+        </div>
+      </div>
+
+      <div class="card" id="tasksList" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Task X</h5>
+          <p class="card-text">Task X description</p>
+          <span class="badge badge-warning">PENDING</span>
+          <p class="card-text">Person 1</p>
+          <p class="card-text">Due Date: 2/20/2022</p>
+          <a href="#" class="btn btn-primary">Delete Task</a>
+        </div>
+      </div>
 
 
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-   <!--Below added links of Js files-->
-   <script src="js/taskManager.js"></script>
-   <script src="js/index.js"></script>
-   
+    </div>
+  </div>
 
-  </body>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <!--Below added links of Js files-->
+  <script src="js/taskManager.js"></script>
+  <script src="js/index.js"></script>
+
+
+</body>
+
 </html>
