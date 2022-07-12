@@ -4,27 +4,25 @@ console.log(tasks);
 
 window.addEventListener("load", () => {
 
-  const form = document.querySelector(".form");
-  const name = document.querySelector("#taskName").value;
-  const assignedTo = document.querySelector("#taskAssign").value;
-  const dueDate = document.querySelector("#taskDueDate").value;
-  const description = document.querySelector("#taskDescription").value;
+  var form = document.querySelector(".form");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-    
-    if (!name || !description || !assignedTo || !dueDate ) {
-      alert("Please fill out all required fields")
+
+    var name = document.querySelector("#taskName").value;
+    var assignedTo = document.querySelector("#taskAssign").value;
+    var dueDate = document.querySelector("#taskDueDate").value;
+    var description = document.querySelector("#taskDescription").value;
+
+    if (!name || !description || !assignedTo || !dueDate) {
+      alert("Please fill out all required fields");
     } else {
-    
-
-
       tasks.addTask(name, description, assignedTo, dueDate);
+      tasks.render();
+      form.reset();
     }
 
-    tasks.render();
 
-    form.reset();
 
 
     //end of submit event listener
