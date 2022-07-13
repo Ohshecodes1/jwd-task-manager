@@ -1,5 +1,4 @@
-
-var tasks = new TaskManager()
+var tasks = new TaskManager(0)
 console.log(tasks);
 
 window.addEventListener("load", () => {
@@ -17,17 +16,28 @@ window.addEventListener("load", () => {
     if (!name || !description || !assignedTo || !dueDate) {
       alert("Please fill out all required fields");
     } else {
-      tasks.addTask(name, description, assignedTo, dueDate);
+      tasks.addTask(tasks.id, name, description, assignedTo, dueDate);
       tasks.render();
       form.reset();
     }
-
-
-
-
     //end of submit event listener
   })
 
 
   //end of window load event listener
+})
+
+// Task 7: Step 2
+var tasksList = document.querySelector('#tasksList');
+
+tasksList.addEventListener('click', (e) => {
+  if (e.target.classList.contains('done-btn')) {
+    const parentTask = e.target.parentElement;
+    // console.log(parentTask);
+
+    let taskId = Number(parentTask.dataset.taskId)
+    let task = tasks.getTaskById(taskId);
+    task.status = 'DONE';
+    tasks.render();
+  }
 })

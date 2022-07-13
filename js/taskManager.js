@@ -1,7 +1,6 @@
-
-function createTaskHtml(name, description, assignedTo, dueDate, status) {
+function createTaskHtml(id, name, description, assignedTo, dueDate, status) {
     const html = `
-    <li class="list-group-item">
+    <li class="list-group-item" data-task-id="${id}">
         <div class="d-flex w-100 mt-2 justify-content-between align-items-center">
             <h5>${name}</h5>
             <span class="badge ${status === 'TODO' ? 'badge-danger' : 'badge-success'}">${status}</span>
@@ -11,8 +10,8 @@ function createTaskHtml(name, description, assignedTo, dueDate, status) {
             <small>Due: ${dueDate}</small>
         </div>
         <p>${description}</p>
-        <button type="button" class="delete-button btn btn-danger">Delete this task</button>
-        <button type="button" class="done-button btn btn-success ${status === 'TODO' ? 'visible' : 'invisible'}">Mark as done</button>
+        <button type="button" class="delete-btn btn btn-danger">Delete this task</button>
+        <button type="button" class="done-btn btn btn-success ${status === 'TODO' ? 'visible' : 'invisible'}">Mark as done</button>
     </li>
 `;
 
@@ -28,10 +27,9 @@ class TaskManager {
         this.currentId = currentId;
 
     }
-    addTask(name, description, assignedTo, dueDate) {
-        this.currentId++
+    addTask(id = 0, name, description, assignedTo, dueDate) {
         const task = {
-            id: this.currentId,
+            id: this.currentId++,
             name: name,
             description: description,
             assignedTo: assignedTo,
@@ -49,13 +47,28 @@ class TaskManager {
             const getDate = new Date(currentTask.dueDate);
             const formattedDate = (getDate.getMonth() + 1) + '/' + getDate.getDate() + '/' + getDate.getFullYear();
 
-            var taskHtml = createTaskHtml(currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
+            var taskHtml = createTaskHtml(currentTask.id, currentTask.name, currentTask.description, currentTask.assignedTo, formattedDate, currentTask.status);
             tasksHtmlList.push(taskHtml);
 
             var tasksHtml = tasksHtmlList.join('\n');
             var tasksList = document.querySelector('#tasksList');
             tasksList.innerHTML = tasksHtml;
         }
+    }
+
+    // Task 7, Step 4
+    getTaskById(taskId) {
+        let foundTask = taskId;
+
+        for (let i = 0; i < this.tasks.length; i++) {
+            var tasks = this.tasks[i];
+
+            if (tasks.id === foundTask) {
+                return tasks
+            }
+        }
+
+
     }
 
 }
