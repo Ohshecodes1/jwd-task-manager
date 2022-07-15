@@ -70,5 +70,34 @@ class TaskManager {
 
 
     }
+    
+    //task 8 step 1:
+
+    //adding save method
+    save() {
+        //we will save two keys (tasks and cuurentId) with their value
+        var tasksJson = JSON.stringify(this.tasks);
+        localStorage.setItem('tasks', tasksJson);
+        var currentId = String(this.currentId);
+        localStorage.setItem('currentId', currentId);
+        //now go to index.js and call save()
+    }
+   
+   //task 8 Step 2:
+
+   //adding a load method so it will stay in the page even after refresh
+   load() {
+    if (localStorage.getItem('tasks')) {
+        const tasksJson = localStorage.getItem('tasks');
+        //converting taskJson string to array with JSON.parse() and storing in this.tasks
+        this.tasks = JSON.parse(tasksJson);
+    }
+    //checking if the 'currentId' key is also stored, if so then load it 
+    if (localStorage.getItem('currentId')) {
+        const currentId = localStorage.getItem('currentId');
+        this.currentId = Number(currentId);
+    }
+  }
+
 
 }

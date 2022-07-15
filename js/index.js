@@ -1,5 +1,9 @@
 var tasks = new TaskManager(0)
 console.log(tasks);
+//task8 step 2 calling load()
+tasks.load();
+tasks.render();
+
 
 window.addEventListener("load", () => {
 
@@ -19,6 +23,9 @@ window.addEventListener("load", () => {
       tasks.addTask(tasks.id, name, description, assignedTo, dueDate);
       tasks.render();
       form.reset();
+      //after adding save()method in taskmanager.js we gonna call it below
+      tasks.save()
+      //now it is stored in the local browser but will go away with refresh from your page,however, will still be stored in localstorage.
     }
     //end of submit event listener
   })
