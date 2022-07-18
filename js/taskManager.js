@@ -100,4 +100,25 @@ class TaskManager {
   }
 
 
+  //task 9 
+
+
+  deleteTask(taskId) {
+    
+    const newTasks = [];
+
+    // Loop over the tasks
+    for (let i = 0; i < this.tasks.length; i++) {
+       
+        const task = this.tasks[i];
+        if (task.id !== taskId) {
+            newTasks.push(task);
+        }
+    }
+
+    // Set this.tasks to newTasks
+    this.tasks = newTasks;
+}
+
+
 }

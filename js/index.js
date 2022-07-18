@@ -1,4 +1,4 @@
-var tasks = new TaskManager(0)
+var tasks = new TaskManager()
 console.log(tasks);
 //task8 step 2 calling load()
 tasks.load();
@@ -47,4 +47,17 @@ tasksList.addEventListener('click', (e) => {
     task.status = 'DONE';
     tasks.render();
   }
+
+
+
+  if (e.target.classList.contains('delete-btn')) {
+    const parentTask = e.target.parentElement;
+    const taskId = Number(parentTask.dataset.taskId);
+    tasks.deleteTask(taskId);
+    tasks.save();
+    tasks.render();
+  }
+
+
 })
+
